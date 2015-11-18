@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title> DOM | Document object</title>
+</head>
+
+<body>
+	<script>
+		var invoer = prompt("voer celcius in...");
+		alert(invoer + "C   =   " + (converteerNaarFahrenheit(invoer)) + " Fahrenheit");
+
+		function converteerNaarFahrenheit (invoer)
+		{
+			// Fx = (Cx * 1,8) + 32
+			return (invoer * 1.8) + 32;
+		}
+	</script>
+</body>
+</html>
