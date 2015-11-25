@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Week 2 - Puzzel 4</title>
+	<meta name"keywords" content="Welk woord is langer?">
+	<meta name="description" content="oefening, puzzel 4">
+	<meta name="author" content="Bianca Averink">
+	<meta charset="UTF-8">
+</head>
+
+<body>
+
+	<form id="valutaForm" name="valutaForm">
+		<label for='woord1'>Woord 1:</label>
+		<input type='text' id="woord1" name="woord1"/>
+
+		<label for='woord2'>Woord 2:</label>
+		<input type='text' id="woord2" name="woord2"/>
+
+		<input type="button" value="Vergelijk woorden" onclick="vergelijkWoorden()"/>
+	</form>
+
+	<p id="antwoord"> <!-- hier komt het antwoord --> </p>
+	
+	<script>
+
+		var vergelijkWoorden = function (woord1, woord2) {
+			var woord1 = document.getElementById('woord1').value;
+			var woord2 = document.getElementById('woord2').value;
+
+			if (woord1.length == woord2.length) { antwoord = "woord 1 en 2 zijn even lang en bevatten " + woord1.length + " letters.";
+			} else if (woord1.length >= woord2.length) { antwoord = "woord 1 is het langst, en bevat " + woord1.length + " letters.";
+			} else { antwoord = "woord 2 is het langst, en bevat " + woord2.length + " letters.";				
+			}
+
+			document.getElementById('antwoord').innerHTML = antwoord;
+
+		};
+
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Week 2 - Puzzel 5</title>
+	<meta name"keywords" content="Euro naar vreemd valuta">
+	<meta name="description" content="oefening, puzzel 5">
+	<meta name="author" content="Bianca Averink">
+	<meta charset="UTF-8">
+
+	<style>
+		label, input {display: block;}
+	</style>
+</head>
+
+<body>
+	<form id="valutaForm" name="valutaForm">
+		<label for='euros'>Euros:</label>
+		<input type='number' id="euros" name="euros"/>
+
+		<label for='valuta'>Valuta:</label>
+		<input type='text' id="valuta" name="valuta"/>
+
+		<input type="button" value="Valuta berekenen" onclick="valutaBerekenen()"/>
+
+	</form>
+
+	<p id="omgerekend"> <!-- hier komt het antwoord --> </p>
+
+	
+	<script>
+
+	var dollar = 1.08
+	var peso = 18.06
+	var yen = 132.04
+	var pond = 0.71
+
+	var valutaBerekenen = function() {
+
+		var euros = document.getElementById('euros').value;
+		var valuta = document.getElementById('valuta').value;
+
+		if(valuta == "dollar"){euros = euros * dollar}
+		if(valuta == "peso"){euros = euros * peso;}
+		if(valuta == "yen"){euros = euros * yen;}
+		if(valuta == "pond"){euros = euros * pond;}
+
+		document.getElementById('omgerekend').innerHTML = euros;
+	}
+
+	</script>
+
+</body>
+
+</html>

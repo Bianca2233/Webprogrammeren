@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Week 2 - Puzzel 1</title>
+	<meta name"keywords" content="Welk woord is langer?">
+	<meta name="description" content="oefening, puzzel 1">
+	<meta name="author" content="Bianca Averink">
+	<meta charset="UTF-8">
+</head>
+
+<body>
+
+	<input type="button" value="bereken BMI" onclick="berekenBMI()"/>
+	
+	<script>
+
+		var berekenBMI = function (gewicht, lengte) {
+			var gewicht = prompt("Wat is uw gewicht in kilo's?");
+			var lengte = prompt("Hoe lang bent u? ");
+
+			var BMIantwoord = gewicht / (lengte * lengte)
+
+			if (BMIantwoord <= 18.5) {
+			alert("u hebt ondergewicht");
+			} else if (BMIantwoord <= 25) {
+			alert("u hebt normaal gewicht");
+			} else if (BMIantwoord <= 27) {
+			alert("u hebt licht overgewicht");
+			} else if (BMIantwoord >= 30) {
+			alert("u hebt matig overgewicht");
+			} else if (BMIantwoord <= 40) {
+			alert("u hebt ernstig overgewicht");
+			} else {
+			alert("u hebt ziekelijk overgewicht");
+			}
+		};
+
+	</script>
+
+</body>
+
+</html>

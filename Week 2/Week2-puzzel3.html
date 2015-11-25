@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Week 2 - Puzzel 3</title>
+	<meta name"keywords" content="Vergelijk Wachtwoord">
+	<meta name="description" content="oefening, puzzel 3">
+	<meta name="author" content="Bianca Averink">
+	<meta charset="UTF-8">
+
+	<style>
+		label, input {display: block;}
+	</style>
+</head>
+
+<body>
+	
+	<form>
+		<label for='wachtwoord1'>Wachtwoord1:</label>
+		<input type='text' id="wachtwoord1" name="wachtwoord1"/>
+
+		<label for='wachtwoord2'>Wachtwoord2:</label>
+		<input type='text' id="wachtwoord2" name="wachtwoord2"/>
+
+		<input type="button" value="vergelijk wachtwoorden" onclick="vergelijkWachtwoord()"/>
+	</form>
+
+	
+	<script>
+	//Maak een functie genaamd vergelijkWachtwoord met twee parameters
+	var vergelijkWachtwoord = function (wachtwoord1, wachtwoord2) {
+		//Maak twee variabelen aan en gebruik deze als parameter
+		var wachtwoord1 = document.getElementById('wachtwoord1').value;
+		var wachtwoord2 = document.getElementById('wachtwoord2').value;
+		//In de functie vergelijkWachtwoord, vergelijk je het wachtwoord
+		if (wachtwoord1 === wachtwoord2) {
+			//Geef met een alert terug op het klopt
+			alert("Klopt, wachtwoorden zijn gelijk");
+		} else {
+			alert("Fout, wachtwoorden zijn niet gelijk");
+		}
+	}
+	
+	</script>
+
+</body>
+</html>
+
+
+
